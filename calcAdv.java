@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class calcAdv {
   public static void main(String[] args) {
     
     Scanner input = new Scanner(System.in);
@@ -65,29 +65,37 @@ public class Main {
         System.out.println("Enter the number that you would like to square root");
         double num1 = input.nextInt();
         double result = Math.sqrt(num1);
+        
+        if (result < 0) {
+          System.out.println("You cannot take the square root from a negative number");
+        }
         System.out.println("Result: " + result);
       }
       else if (choice == 6) {
         System.out.println("Enter the number that you want to square.");
         double num1 = input.nextInt();
+        
         double result = Math.pow(num1, 2);
         System.out.println("Result" + result);
       }
       else if (choice == 7) {
         System.out.println("Enter the number that you would like to find the sine of.");
         double num1 = input.nextInt();
+        
         double result = Math.sin(num1);
         System.out.println("Result: " + result);
       }
       else if (choice == 8) {
         System.out.println("Enter the number that you would like to find the cosine of.");
         double num1 = input.nextInt();
+        
         double result = Math.cos(num1);
         System.out.println("Result: " + result);
       }
       else if (choice == 9) {
         System.out.println("Enter the number that you would liike to find the tangent of.");
         double num1 = input.nextInt();
+        
         double result = Math.tan(num1);
         System.out.println("Result: " + result);
       }
@@ -95,12 +103,17 @@ public class Main {
         System.out.println("Enter the number that you would like to find the natural log of.");
         double num1 = input.nextInt();
         double result = Math.log(num1);
+        
+        if (result <= 0) {
+          System.out.println("You cannot take the log of a number that is at zero or below.");
+        }
         System.out.println("Result: " + result);
       }
       else if (choice == 11) {
         System.out.println("Enter the number that you would like to multiply with the base e function, \nand the power that you want to raise e to.");
         double num1 = input.nextInt();
         double num2 = input.nextInt();
+        
         double result = num1 * (Math.exp(num2));
         System.out.println("Result: " + result);
       }
